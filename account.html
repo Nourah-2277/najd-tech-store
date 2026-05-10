@@ -1,55 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Account - Najd Tech Store</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Najd Tech Store - Account</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
+  <div class="page-shell">
+    <header class="topbar">
+      <div class="brand">
+        <div class="brand-logo">N</div>
+        <div>
+          <h1>Najd Tech Store</h1>
+          <p>Smart gadgets marketplace</p>
+        </div>
+      </div>
 
-    <!-- Header -->
-    <header>
-        <h2>Najd Tech Store</h2>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="catalog.html">Catalog</a>
-            <a href="product.html">Product</a>
-            <a href="cart.html">Cart</a>
-            <a href="checkout.html">Checkout</a>
-            <a href="account.html">Account</a>
-            <a href="dashboard.html">Dashboard</a>
-        </nav>
-        <button>Explore Store</button>
+      <nav class="nav-links">
+        <a href="#">Home</a>
+        <a href="#">Catalog</a>
+        <a href="#">Product</a>
+        <a href="#">Cart</a>
+        <a href="#">Checkout</a>
+        <a href="#" class="active">Account</a>
+        <a href="#">Dashboard</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="#" class="btn btn-dark small">Login</a>
+        <a href="#" class="btn btn-primary small">Explore Store</a>
+      </div>
     </header>
 
-    <!-- Account Section -->
-    <section>
-        <h1>Join a smarter regional gadget marketplace.</h1>
-        <p>Buyers can create secure accounts to shop faster, while sellers can manage listings and track order activity from one dashboard.</p>
+    <main class="container">
+      <section class="account-grid">
+        <div class="panel promo-panel">
+          <span class="pill muted">Screen 6 • Account access</span>
+          <h2>Join a smarter regional gadget marketplace.</h2>
+          <p class="subtext">
+            Buyers can create secure accounts to shop faster, while sellers can manage listings and
+            track order activity from one dashboard.
+          </p>
 
-        <div>
+          <div class="feature-card">
             <h3>Buyer account</h3>
             <p>Save favorites, manage addresses, and review orders quickly.</p>
+          </div>
 
+          <div class="feature-card">
             <h3>Seller account</h3>
             <p>Publish gadgets, control pricing, and analyze sales signals.</p>
+          </div>
         </div>
 
-        <!-- Login Form -->
-        <div>
-            <h2>Welcome back</h2>
-            <form>
-                <label>Email</label>
-                <input type="email" placeholder="Enter your email">
+        <div class="panel auth-panel">
+          <div class="tabs">
+            <button class="tab active">Login</button>
+            <button class="tab">Register</button>
+          </div>
 
-                <label>Password</label>
-                <input type="password" placeholder="Enter your password">
+          <h3>Welcome back</h3>
 
-                <button>Login to dashboard</button>
-            </form>
+          <form class="auth-form">
+            <div class="field">
+              <label>Email</label>
+              <input type="email" placeholder="Enter your email" />
+            </div>
+
+            <div class="field">
+              <label>Password</label>
+              <input type="password" placeholder="Enter your password" />
+            </div>
+
+            <button type="submit" class="btn btn-primary wide">Login to dashboard</button>
+          </form>
         </div>
-    </section>
-
+      </section>
+    </main>
+  </div>
 </body>
 </html>
