@@ -159,3 +159,101 @@ if (document.querySelector('.product-page')) {
     });
   });
 }
+
+//CART PAGE 
+
+document.addEventListener("DOMContentLoaded", () => {
+
+  const qtyControls = document.querySelectorAll(".qty-control");
+
+  qtyControls.forEach(control => {
+    const minusBtn = control.querySelector("button:first-child");
+    const plusBtn = control.querySelector("button:last-child");
+    const qtyText = control.querySelector("span");
+
+    minusBtn.addEventListener("click", () => {
+      let qty = parseInt(qtyText.textContent);
+      if (qty > 1) {
+        qty--;
+        qtyText.textContent = qty;
+        updateCartTotal();
+      }
+    });
+
+    plusBtn.addEventListener("click", () => {
+      let qty = parseInt(qtyText.textContent);
+      qty++;
+      qtyText.textContent = qty;
+      updateCartTotal();
+    });
+  });
+
+  const goCheckoutBtn = document.querySelector(".go-checkout");
+  if (goCheckoutBtn) {
+    goCheckoutBtn.addEventListener("click", (e) => {
+      e.preventDefault();
+      window.location.href = "checkout.html";
+    });
+  }
+
+  function cleanNumber(text) {
+    return parseFloat(text.replace(/[^0-9]/g, ""));
+  }
+
+  function updateCartTotal() {
+    let subtotal = 0;
+
+    const items = document.querySelectorAll(".product-card");
+
+    items.forEach(item => {
+      const priceText = item.querySelector(".price").textContent;
+      const price = cleanNumber(priceText);
+      const qty = parseInt(item.querySelector(".qty-control span").textContent);
+      subtotal += price * qty;
+    });
+
+    const subtotalBox = document.querySelectorAll(".summary-row strong")[0];
+    subtotalBox.textContent = `SAR ${subtotal}`;
+
+    const delivery = 30;
+    const discount = 150;
+    const total = subtotal + delivery - discount;
+
+    const totalBox = document.querySelector(".summary-total strong");
+    totalBox.textContent = `SAR ${total}`;
+  }
+
+  updateCartTotal();
+
+});
+
+
+
+  //  CHECKOUT PAGE
+  const form = document.querySelector(".checkout-form");
+  const placeOrderBtn = document.querySelector(".checkout-btn");
+
+  if (form && placeOrderBtn) {
+    placeOrderBtn.addEventListener("click", (e) => {
+      e.preventDefault();
+
+      const firstName = form.querySelector('input[placeholder="Abeer"]');
+      const lastName = form.querySelector('input[placeholder="Alqahtani"]');
+      const email = form.querySelector('input[type="email"]');
+      const phone = form.querySelector('input[placeholder="05XXXXXXXX"]');
+      const address = form.querySelector('input[placeholder="Street, district, city, postal code"]');
+
+      if (
+        !firstName.value.trim() ||
+        !lastName.value.trim() ||
+        !email.value.trim() ||
+        !phone.value.trim() ||
+        !address.value.trim()
+      ) {
+        alert("Please fill in all required fields before placing the order.");
+        return;
+      }
+
+      alert("Your order has been placed successfully!");
+    });
+  }
