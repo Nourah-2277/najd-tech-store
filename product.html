@@ -1,391 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Product - Najd Tech Store</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Product Details - Najd Tech Store</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
-
-<div class="page-shell">
-    <header class="topbar">
+  <div class="page-shell">
+<header class="topbar">
       <div class="brand">
-        <div class="brand-logo">N</div>
+        <a class="brand-logo" href="index.html" aria-label="Najd Tech Store home">N</a>
         <div>
           <h1>Najd Tech Store</h1>
           <p>Smart gadgets marketplace</p>
         </div>
       </div>
 
-      <nav class="nav-links">
+      <nav class="nav-links" aria-label="Main navigation">
         <a href="index.html">Home</a>
         <a href="catalog.html">Catalog</a>
         <a href="product.html" class="active">Product</a>
         <a href="cart.html">Cart</a>
         <a href="checkout.html">Checkout</a>
-        <a href="login.html">Account</a>
+        <a href="account.html">Account</a>
         <a href="dashboard.html">Dashboard</a>
       </nav>
 
       <div class="nav-actions">
-        <a href="login.html" class="btn btn-dark small">Login</a>
-        <a href="product.html" class="btn btn-primary small">Explore Store</a>
+        <a href="account.html" class="btn btn-dark small">Login</a>
+        <a href="catalog.html" class="btn btn-primary small">Explore Store</a>
       </div>
     </header>
 
+    <main class="container" id="product-details">
+      <p class="product-breadcrumb">Screen 3 • Product details</p>
+      <h1 class="product-page-title">Selected gadget details</h1>
+      <div class="trust-badges">
+        <span class="tag">Warranty-ready</span>
+        <span class="tag">Verified seller</span>
+        <span class="tag">Fast delivery</span>
+      </div>
 
-  <!-- ═══ CAMERA ═══ -->
-  <p class="product-breadcrumb">Screen 3 • Product details</p>
-  <div class="product-page-title">
-    <h1>Canon Camera EOS 4000D</h1>
-    <p>Professional camera page with specs, trust signals, and conversion elements.</p>
+      <section class="product-page" data-category="laptops">
+        <div class="product-image"><img src="laptop2.jpeg" alt="NovaBook X14 Pro"></div>
+        <div class="product-details-panel"><span class="pill muted">Laptop</span><h1>NovaBook X14 Pro</h1><p class="subtext">Premium laptop for study, work, and creative tasks with 16GB RAM and 512GB SSD.</p><h2>SAR 4,299</h2><div class="product-actions"><button class="btn btn-primary addtocart">Add to cart</button><button class="btn btn-secondary save">Save item</button><button class="btn btn-dark chat">Chat with seller</button></div></div>
+      </section>
+      <section class="product-page" data-category="phones">
+        <div class="product-image"><img src="phone5.jpeg" alt="IPHONE 17"></div>
+        <div class="product-details-panel"><span class="pill muted">Phone</span><h1>IPHONE 17</h1><p class="subtext">Flagship smartphone with high performance, premium camera, and smooth user experience.</p><h2>SAR 3,699</h2><div class="product-actions"><button class="btn btn-primary addtocart">Add to cart</button><button class="btn btn-secondary save">Save item</button><button class="btn btn-dark chat">Chat with seller</button></div></div>
+      </section>
+      <section class="product-page" data-category="headphone">
+        <div class="product-image"><img src="headphone.jpeg" alt="EchoPods Max"></div>
+        <div class="product-details-panel"><span class="pill muted">Headphone</span><h1>EchoPods Max</h1><p class="subtext">Wireless audio with noise cancellation and comfortable long-use design.</p><h2>SAR 649</h2><div class="product-actions"><button class="btn btn-primary addtocart">Add to cart</button><button class="btn btn-secondary save">Save item</button><button class="btn btn-dark chat">Chat with seller</button></div></div>
+      </section>
+      <section class="product-page" data-category="wearables">
+        <div class="product-image"><img src="smartwatch.jpg" alt="Pulse Watch S3"></div>
+        <div class="product-details-panel"><span class="pill muted">Wearable</span><h1>Pulse Watch S3</h1><p class="subtext">Smartwatch for health tracking, daily notifications, and modern lifestyle use.</p><h2>SAR 899</h2><div class="product-actions"><button class="btn btn-primary addtocart">Add to cart</button><button class="btn btn-secondary save">Save item</button><button class="btn btn-dark chat">Chat with seller</button></div></div>
+      </section>
+      <section class="product-page" data-category="tablet">
+        <div class="product-image"><img src="ipad.jpeg" alt="VisionPad Air"></div>
+        <div class="product-details-panel"><span class="pill muted">Tablet</span><h1>VisionPad Air</h1><p class="subtext">Light tablet for learning, browsing, media, and productivity tasks.</p><h2>SAR 2,999</h2><div class="product-actions"><button class="btn btn-primary addtocart">Add to cart</button><button class="btn btn-secondary save">Save item</button><button class="btn btn-dark chat">Chat with seller</button></div></div>
+      </section>
+      <section class="product-page" data-category="camera">
+        <div class="product-image"><img src="camera3.jpeg" alt="Canon Camera 8K"></div>
+        <div class="product-details-panel"><span class="pill muted">Camera</span><h1>Canon Camera 8K</h1><p class="subtext">High-resolution camera for content creation and professional visual work.</p><h2>SAR 1,500</h2><div class="product-actions"><button class="btn btn-primary addtocart">Add to cart</button><button class="btn btn-secondary save">Save item</button><button class="btn btn-dark chat">Chat with seller</button></div></div>
+      </section>
+      <section class="product-page" data-category="gaming">
+        <div class="product-image"><img src="playstation.avif" alt="Game Gear"></div>
+        <div class="product-details-panel"><span class="pill muted">Gaming</span><h1>Game Gear</h1><p class="subtext">Gaming console and accessories bundle for entertainment-focused buyers.</p><h2>SAR 2,697</h2><div class="product-actions"><button class="btn btn-primary addtocart">Add to cart</button><button class="btn btn-secondary save">Save item</button><button class="btn btn-dark chat">Chat with seller</button></div></div>
+      </section>
+    </main>
+    <footer class="footer">© 2026 Najd Tech Store</footer>
   </div>
-  <div class="trust-badges">
-    <span class="trust-badge">In stock</span>
-    <span class="trust-badge">1-year warranty</span>
-    <span class="trust-badge">Seller verified</span>
-  </div>
-
-  <section class="product-page" data-category="camera">
-    <div class="product-image">
-      <img src="camera3.jpeg" alt="canon camera">
-      <div class="thumbnails">
-        <img src="camera3.jpeg">
-        <img src="camera%20.jpeg">
-        <img src="camera%204.jpeg">
-      </div>
-    </div>
-    <div class="product-details">
-      <h1>Canon Camera EOS 4000D</h1>
-      <div class="seller-row">
-        <p>By Najd Verified Seller • Riyadh Fulfillment</p>
-        <span class="stars">★★★★★</span>
-      </div>
-      <div class="price-row">
-        <h2>SAR 1,309</h2>
-        <span class="delivery-tag">Free express delivery</span>
-      </div>
-      <p>Capture ultra-high-definition moments with this professional camera designed for creators and photographers.</p>
-      <ul>
-        <li><div><strong>8K video recording</strong><span>Ultra-clear footage for professional creators</span></div></li>
-        <li><div><strong>Advanced image stabilization</strong><span>Sharp shots even in motion</span></div></li>
-        <li><div><strong>Professional lens system</strong><span>Interchangeable lenses for every scene</span></div></li>
-        <li><div><strong>High-performance sensor</strong><span>Vivid detail in any lighting condition</span></div></li>
-      </ul>
-      <button class="addtocart">Add to cart</button>
-      <button class="save">Save item</button>
-      <button class="chat">Chat with seller</button>
-    </div>
-  </section>
-
-
-  <!-- ═══ ECHOPODS ═══ -->
-  <p class="product-breadcrumb">Screen 3 • Product details</p>
-  <div class="product-page-title">
-    <h1>EchoPods Max</h1>
-    <p>Premium wireless headphones with noise cancellation and all-day comfort.</p>
-  </div>
-  <div class="trust-badges">
-    <span class="trust-badge">In stock</span>
-    <span class="trust-badge">2-year warranty</span>
-    <span class="trust-badge">Seller verified</span>
-  </div>
-
-  <section class="product-page" data-category="headphone">
-    <div class="product-image">
-      <img src="headphone.jpeg" alt="EchoPods Max">
-      <div class="thumbnails">
-        <img src="headphone.jpeg">
-        <img src="headphone3.jpeg">
-        <img src="headphone5.jpeg">
-      </div>
-    </div>
-    <div class="product-details">
-      <h1>EchoPods Max</h1>
-      <div class="seller-row">
-        <p>By Najd Verified Seller • Riyadh</p>
-        <span class="stars">★★★★★</span>
-      </div>
-      <div class="price-row">
-        <h2>SAR 649</h2>
-        <span class="delivery-tag">Free express delivery</span>
-      </div>
-      <p>High-quality wireless headphones with immersive sound, noise cancellation, and all-day comfort for music and calls.</p>
-      <ul>
-        <li><div><strong>Active Noise Cancellation</strong><span>Block out distractions anywhere</span></div></li>
-        <li><div><strong>30-hour battery life</strong><span>All-day and overnight listening</span></div></li>
-        <li><div><strong>Bluetooth 5.2</strong><span>Stable and fast wireless connection</span></div></li>
-        <li><div><strong>Premium sound quality</strong><span>Rich bass and crystal-clear highs</span></div></li>
-      </ul>
-      <label for="filtercolore">Choose the color</label>
-      <select id="filtercolore">
-        <option value="black">Black</option>
-        <option value="golden">Golden</option>
-        <option value="orange,blue">Orange / Blue</option>
-      </select>
-      <button class="addtocart">Add to cart</button>
-      <button class="save">Save item</button>
-      <button class="chat">Chat with seller</button>
-    </div>
-  </section>
-
-
-  <!-- ═══ GAMING ═══ -->
-  <p class="product-breadcrumb">Screen 3 • Product details</p>
-  <div class="product-page-title">
-    <h1>PlayStation 5 DualSense Controller</h1>
-    <p>Next-gen gaming controller with haptic feedback and dynamic trigger effects.</p>
-  </div>
-  <div class="trust-badges">
-    <span class="trust-badge">In stock</span>
-    <span class="trust-badge">1-year warranty</span>
-    <span class="trust-badge">Seller verified</span>
-  </div>
-
-  <section class="product-page" data-category="gaming">
-    <div class="product-image">
-      <img src="playstation.avif" alt="GameCore Mini">
-      <div class="thumbnails">
-        <img src="playstation.avif">
-        <img src="playstatione2.jpeg">
-        <img src="playstation.avif">
-      </div>
-    </div>
-    <div class="product-details">
-      <h1>PlayStation 5 DualSense Wireless Controller</h1>
-      <div class="seller-row">
-        <p>By Najd Verified Seller • Al-Qassim</p>
-        <span class="stars">★★★★★</span>
-      </div>
-      <div class="price-row">
-        <h2>SAR 697</h2>
-        <span class="delivery-tag">Free express delivery</span>
-      </div>
-      <p>Discover a deeper, highly immersive gaming experience with haptic feedback and dynamic trigger effects.</p>
-      <ul>
-        <li><div><strong>High-performance gaming engine</strong><span>Smooth and responsive gameplay</span></div></li>
-        <li><div><strong>Compact and portable design</strong><span>Ergonomic grip for long sessions</span></div></li>
-        <li><div><strong>Supports multiple controllers</strong><span>Play with friends seamlessly</span></div></li>
-        <li><div><strong>Optimized for modern games</strong><span>Built for PS5 titles and beyond</span></div></li>
-      </ul>
-      <label for="filtercolore1">Choose the color</label>
-      <select id="filtercolore1">
-        <option value="black">Black</option>
-        <option value="Silver">Silver</option>
-      </select>
-      <button class="addtocart">Add to cart</button>
-      <button class="save">Save item</button>
-      <button class="chat">Chat with seller</button>
-    </div>
-  </section>
-
-
-  <!-- ═══ LAPTOPS ═══ -->
-  <p class="product-breadcrumb">Screen 3 • Product details</p>
-  <div class="product-page-title">
-    <h1>NovaBook X14 Pro</h1>
-    <p>Premium ultrabook concept page with smart specs, trust signals, and conversion elements.</p>
-  </div>
-  <div class="trust-badges">
-    <span class="trust-badge">In stock</span>
-    <span class="trust-badge">2-year warranty</span>
-    <span class="trust-badge">Seller verified</span>
-  </div>
-
-  <section class="product-page" data-category="laptops">
-    <div class="product-image">
-      <img src="laptop.avif" alt="Laptop">
-      <div class="thumbnails">
-        <img src="laptope4.avif">
-        <img src="laptop2.jpeg">
-        <img src="laptop.avif">
-      </div>
-    </div>
-    <div class="product-details">
-      <h1>NovaBook X14 Pro</h1>
-      <div class="seller-row">
-        <p>By Najd Verified Seller • Riyadh Fulfillment</p>
-        <span class="stars">★★★★★</span>
-      </div>
-      <div class="price-row">
-        <h2>SAR 4,299</h2>
-        <span class="delivery-tag">Free express delivery</span>
-      </div>
-      <p>A sleek high-performance laptop designed for students and professionals. Combines speed, battery efficiency, and lightweight design.</p>
-      <ul>
-        <li><div><strong>Intel Core i7</strong><span>Smooth multitasking and daily productivity</span></div></li>
-        <li><div><strong>16GB RAM / 512GB SSD</strong><span>Fast launch speed and responsive storage</span></div></li>
-        <li><div><strong>14-hour battery</strong><span>Optimized for all-day performance</span></div></li>
-        <li><div><strong>Secure checkout</strong><span>Protected order flow with buyer confirmation</span></div></li>
-      </ul>
-      <button class="addtocart">Add to cart</button>
-      <button class="save">Save item</button>
-      <button class="chat">Chat with seller</button>
-    </div>
-  </section>
-
-
-  <!-- ═══ PHONES ═══ -->
-  <p class="product-breadcrumb">Screen 3 • Product details</p>
-  <div class="product-page-title">
-    <h1>iPhone 17</h1>
-    <p>Flagship smartphone with advanced camera system and all-day battery life.</p>
-  </div>
-  <div class="trust-badges">
-    <span class="trust-badge">In stock</span>
-    <span class="trust-badge">1-year warranty</span>
-    <span class="trust-badge">Seller verified</span>
-  </div>
-
-  <section class="product-page" data-category="phones">
-    <div class="product-image">
-      <img src="phone2.jpeg" alt="apple Phone17">
-      <div class="thumbnails">
-        <img src="phone2.jpeg">
-        <img src="phone3.jpeg">
-        <img src="phone5.jpeg">
-      </div>
-    </div>
-    <div class="product-details">
-      <h1>iPhone 17</h1>
-      <div class="seller-row">
-        <p>By Najd Verified Seller • Riyadh</p>
-        <span class="stars">★★★★★</span>
-      </div>
-      <div class="price-row">
-        <h2>SAR 3,699</h2>
-        <span class="delivery-tag">Free express delivery</span>
-      </div>
-      <p>A powerful smartphone designed for modern users with high performance, advanced camera system, and long-lasting battery.</p>
-      <ul>
-        <li><div><strong>Snapdragon Processor</strong><span>Lightning-fast performance every day</span></div></li>
-        <li><div><strong>12GB RAM / 256GB Storage</strong><span>Plenty of space and smooth multitasking</span></div></li>
-        <li><div><strong>5000mAh battery</strong><span>All-day power without interruption</span></div></li>
-        <li><div><strong>Fast charging support</strong><span>From 0 to full in under an hour</span></div></li>
-      </ul>
-      <select class="filtermodel">
-        <option value="iphone 17">iPhone 17</option>
-        <option value="iphone 17 pro max">iPhone 17 Pro Max</option>
-      </select>
-      <label for="filtercolore2">Choose the color</label>
-      <select id="filtercolore2">
-        <option value="purple">Purple</option>
-        <option value="black">Black</option>
-        <option value="Silver">Silver</option>
-        <option value="orange">Orange</option>
-      </select>
-      <button class="addtocart">Add to cart</button>
-      <button class="save">Save item</button>
-      <button class="chat">Chat with seller</button>
-    </div>
-  </section>
-
-
-  <!-- ═══ TABLET ═══ -->
-  <p class="product-breadcrumb">Screen 3 • Product details</p>
-  <div class="product-page-title">
-    <h1>VisionPad Air</h1>
-    <p>Lightweight tablet perfect for study, entertainment, and creative tasks.</p>
-  </div>
-  <div class="trust-badges">
-    <span class="trust-badge">In stock</span>
-    <span class="trust-badge">2-year warranty</span>
-    <span class="trust-badge">Seller verified</span>
-  </div>
-
-  <section class="product-page" data-category="tablet">
-    <div class="product-image">
-      <img src="ipad.jpeg" alt="VisionPad Air">
-      <div class="thumbnails">
-        <img src="ipad2.jpeg">
-        <img src="ipad.jpeg">
-        <img src="ipad3.jpeg">
-      </div>
-    </div>
-    <div class="product-details">
-      <h1>VisionPad Air</h1>
-      <div class="seller-row">
-        <p>By Najd Verified Seller • Riyadh</p>
-        <span class="stars">★★★★☆</span>
-      </div>
-      <div class="price-row">
-        <h2>SAR 2,999</h2>
-        <span class="delivery-tag">Free express delivery</span>
-      </div>
-      <p>A lightweight and powerful tablet perfect for study, entertainment, and creative tasks with a stunning display.</p>
-      <ul>
-        <li><div><strong>10.9-inch display</strong><span>Vivid colors and sharp detail</span></div></li>
-        <li><div><strong>8GB RAM / 256GB Storage</strong><span>Responsive and spacious</span></div></li>
-        <li><div><strong>All-day battery life</strong><span>Up to 10 hours of continuous use</span></div></li>
-        <li><div><strong>Perfect for students & creators</strong><span>Light, fast, and capable</span></div></li>
-      </ul>
-      <label>Choose the color</label>
-      <select class="filtercolore">
-        <option value="purple">Purple</option>
-        <option value="black">Black</option>
-        <option value="Silver">Silver</option>
-        <option value="blue">Blue</option>
-      </select>
-      <button class="addtocart">Add to cart</button>
-      <button class="save">Save item</button>
-      <button class="chat">Chat with seller</button>
-    </div>
-  </section>
-
-
-  <!-- ═══ SMARTWATCH ═══ -->
-  <p class="product-breadcrumb">Screen 3 • Product details</p>
-  <div class="product-page-title">
-    <h1>WHOOP Peak</h1>
-    <p>Smart fitness band for health tracking, activity monitoring, and daily performance.</p>
-  </div>
-  <div class="trust-badges">
-    <span class="trust-badge">In stock</span>
-    <span class="trust-badge">1-year warranty</span>
-    <span class="trust-badge">Seller verified</span>
-  </div>
-
-  <section class="product-page" data-category="wearables">
-    <div class="product-image">
-      <img src="smartwatch.jpg" alt="smart watch">
-      <div class="thumbnails">
-        <img src="smartwatch.jpg">
-        <img src="smartwatch2.jpg">
-        <img src="smartwatch4.webp">
-      </div>
-    </div>
-    <div class="product-details">
-      <h1>WHOOP Peak</h1>
-      <div class="seller-row">
-        <p>By Najd Verified Seller • Riyadh</p>
-        <span class="stars">★★★★★</span>
-      </div>
-      <div class="price-row">
-        <h2>SAR 1,349</h2>
-        <span class="delivery-tag">Free express delivery</span>
-      </div>
-      <p>A smart fitness band designed to track your health, activity, and daily performance with precision and ease.</p>
-      <ul>
-        <li><div><strong>Step & calorie tracking</strong><span>Stay on top of your daily goals</span></div></li>
-        <li><div><strong>Heart rate monitoring</strong><span>Real-time health awareness</span></div></li>
-        <li><div><strong>Sleep tracking</strong><span>Understand and improve your rest</span></div></li>
-        <li><div><strong>Lightweight and comfortable</strong><span>Wear it all day without noticing</span></div></li>
-      </ul>
-      <select class="filtercolore">
-        <option value="black">Black</option>
-        <option value="golden">Golden</option>
-      </select>
-      <button class="addtocart">Add to cart</button>
-      <button class="save">Save item</button>
-      <button class="chat">Chat with seller</button>
-    </div>
-  </section>
-
-
-<footer class="footer">© 2026 Najd Tech Store</footer>
-<script src="script.js"></script>
-</div>
+  <script src="script.js"></script>
 </body>
 </html>
