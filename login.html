@@ -13,32 +13,32 @@
 <div class="page-shell">
     <header class="topbar">
       <div class="brand">
-        <div class="brand-logo">N</div>
+        <a class="brand-logo" href="index.html" aria-label="Najd Tech Store home">N</a>
         <div>
           <h1>Najd Tech Store</h1>
           <p>Smart gadgets marketplace</p>
         </div>
       </div>
 
-      <nav class="nav-links">
-        <a href="index.html" class="active">Home</a>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="index.html">Home</a>
         <a href="catalog.html">Catalog</a>
         <a href="product.html">Product</a>
-        <a href="cart.html" >Cart</a>
+        <a href="cart.html">Cart</a>
         <a href="checkout.html">Checkout</a>
-        <a href="login.html">Account</a>
+        <a href="account.html" class="active">Account</a>
         <a href="dashboard.html">Dashboard</a>
       </nav>
 
       <div class="nav-actions">
-        <a href="login.html" class="btn btn-dark small">Login</a>
-        <a href="product.html" class="btn btn-primary small">Explore Store</a>
+        <a href="account.html" class="btn btn-dark small">Login</a>
+        <a href="catalog.html" class="btn btn-primary small">Explore Store</a>
       </div>
     </header>
 
 
     <main>
-        <section class="login-intro">
+        <section class="login-intro" id="account-intro">
             <h1>Join a smarter regional gadget marketplace.</h1>
             <p>Buyers can create secure accounts to shop faster, while sellers can manage listings and track order activity from one dashboard.</p>
 
@@ -56,7 +56,7 @@
         </section>
 
 
-        <section class="login-section">
+        <section class="login-section" id="login-form">
             <h2>Welcome back</h2>
 
             <form class="login-form" action="dashboard.html" method="post">
@@ -72,5 +72,6 @@
     </main>
 <footer class="footer">© 2026 Najd Tech Store</footer>
 </div>
+<script src="script.js"></script>
 </body>
 </html>
