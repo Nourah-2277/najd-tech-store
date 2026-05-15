@@ -7,25 +7,31 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
- <div class="page-shell">
+  <div class="page-shell">
     <header class="topbar">
       <div class="brand">
-        <div class="brand-logo">N</div>
+        <a class="brand-logo" href="index.html" aria-label="Najd Tech Store home">N</a>
         <div>
           <h1>Najd Tech Store</h1>
           <p>Smart gadgets marketplace</p>
         </div>
       </div>
 
-      <nav class="nav-links">
+      <nav class="nav-links" aria-label="Main navigation">
         <a href="index.html">Home</a>
-        <a href="catalog.html" class="active">Catalog</a>
+        <a href="catalog.html#products">Catalog</a>
         <a href="product.html">Product</a>
         <a href="cart.html">Cart</a>
-        <a href="checkout.html">Checkout</a>
+        <a href="checkout.html" class="active">Checkout</a>
         <a href="account.html">Account</a>
         <a href="dashboard.html">Dashboard</a>
       </nav>
+
+      <div class="nav-actions">
+        <a href="account.html" class="btn btn-dark small">Login</a>
+        <a href="catalog.html" class="btn btn-primary small">Explore Store</a>
+      </div>
+    </header>
 
     <main class="container">
       <section class="hero-row">
@@ -41,7 +47,7 @@
         </div>
       </section>
 
-      <section class="content-grid">
+      <section class="content-grid" id="checkout-form">
         <div class="panel form-panel">
           <form class="checkout-form">
             <div class="field-grid two">
@@ -89,7 +95,7 @@
           </form>
         </div>
 
-        <aside class="panel payment-panel">
+        <aside class="panel payment-panel" id="payment-summary">
           <h3>Final payment</h3>
 
           <div class="payment-row">
@@ -110,11 +116,12 @@
             <strong>SAR 5,727</strong>
           </div>
 
-          <a href="#" class="btn btn-primary wide">Place order</a>
+          <button type="button" class="btn btn-primary wide checkout-btn">Place order</button>
           <p class="note">Your order details will be confirmed after payment.</p>
         </aside>
       </section>
     </main>
   </div>
+<script src="script.js"></script>
 </body>
 </html>
