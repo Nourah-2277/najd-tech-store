@@ -10,14 +10,14 @@
   <div class="page-shell">
     <header class="topbar">
       <div class="brand">
-        <div class="brand-logo">N</div>
+        <a class="brand-logo" href="index.html" aria-label="Najd Tech Store home">N</a>
         <div>
           <h1>Najd Tech Store</h1>
           <p>Smart gadgets marketplace</p>
         </div>
       </div>
 
-      <nav class="nav-links">
+      <nav class="nav-links" aria-label="Main navigation">
         <a href="index.html">Home</a>
         <a href="catalog.html">Catalog</a>
         <a href="product.html">Product</a>
@@ -28,8 +28,8 @@
       </nav>
 
       <div class="nav-actions">
-        <a href="#" class="btn btn-dark small">Login</a>
-        <a href="#" class="btn btn-primary small">Explore Store</a>
+        <a href="account.html" class="btn btn-dark small">Login</a>
+        <a href="catalog.html" class="btn btn-primary small">Explore Store</a>
       </div>
     </header>
 
@@ -41,10 +41,10 @@
           <p class="subtext">Clear order summary with editable quantities and pricing overview.</p>
         </div>
 
-        <a href="#" class="btn btn-primary">Continue to checkout</a>
+        <a href="checkout.html#checkout-form" class="btn btn-primary">Continue to checkout</a>
       </section>
 
-      <section class="content-grid">
+      <section class="content-grid" id="cart-items">
         <div class="panel products-panel">
           <article class="product-card">
             <div class="product-left">
@@ -95,7 +95,7 @@
           </article>
         </div>
 
-        <aside class="panel summary-panel">
+        <aside class="panel summary-panel" id="order-summary">
           <h3>Order summary</h3>
 
           <div class="summary-row">
@@ -118,8 +118,8 @@
             <strong>SAR 5,727</strong>
           </div>
 
-          <a href="#" class="btn btn-primary wide go-checkout">Proceed to checkout</a>
-          <a href="#" class="btn btn-secondary wide">Continue shopping</a>
+          <a href="checkout.html" class="btn btn-primary wide go-checkout">Proceed to checkout</a>
+          <a href="catalog.html" class="btn btn-secondary wide">Continue shopping</a>
         </aside>
       </section>
     </main>
