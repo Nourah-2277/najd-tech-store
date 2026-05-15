@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>home-NAJD TECH STORE</title>
+    <title>Najd Tech Store - Home</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -13,32 +13,32 @@
 <div class="page-shell">
     <header class="topbar">
       <div class="brand">
-        <div class="brand-logo">N</div>
+        <a class="brand-logo" href="index.html" aria-label="Najd Tech Store home">N</a>
         <div>
           <h1>Najd Tech Store</h1>
           <p>Smart gadgets marketplace</p>
         </div>
       </div>
 
-      <nav class="nav-links">
+      <nav class="nav-links" aria-label="Main navigation">
         <a href="index.html" class="active">Home</a>
         <a href="catalog.html">Catalog</a>
         <a href="product.html">Product</a>
-        <a href="cart.html" >Cart</a>
+        <a href="cart.html">Cart</a>
         <a href="checkout.html">Checkout</a>
-        <a href="login.html">Account</a>
+        <a href="account.html">Account</a>
         <a href="dashboard.html">Dashboard</a>
       </nav>
 
       <div class="nav-actions">
-        <a href="login.html" class="btn btn-dark small">Login</a>
-        <a href="product.html" class="btn btn-primary small">Explore Store</a>
+        <a href="account.html" class="btn btn-dark small">Login</a>
+        <a href="catalog.html#products" class="btn btn-primary small">Explore Store</a>
       </div>
     </header>
 
 <main>
 
-<section class="overview">
+<section class="overview" id="home">
 
 
   <div class="overview-left">
@@ -66,7 +66,7 @@
     </ul>
   </div>
 
-    <a href="catalog.html" class="btn">Shop gadgets</a>
+    <a href="catalog.html#products" class="btn">Shop gadgets</a>
     <a href="dashboard.html" class="btn secondary">View seller dashboard</a>
   </div>
 
@@ -100,7 +100,7 @@
 
 </section>
    </main>
-      <section class="categories">
+      <section class="categories" id="featured-categories">
     <h2>Featured categories</h2>
     <p>Organized browsing experience for key tech segments</p>
 
@@ -146,6 +146,3 @@
 </div>
 </body>
 </html>
-
-
-
