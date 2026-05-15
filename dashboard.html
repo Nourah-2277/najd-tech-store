@@ -8,38 +8,46 @@
 </head>
 
 <body>
+
+
 <div class="page-shell">
     <header class="topbar">
       <div class="brand">
-        <div class="brand-logo">N</div>
+        <a class="brand-logo" href="index.html" aria-label="Najd Tech Store home">N</a>
         <div>
           <h1>Najd Tech Store</h1>
           <p>Smart gadgets marketplace</p>
         </div>
       </div>
 
-      <nav class="nav-links">
+      <nav class="nav-links" aria-label="Main navigation">
         <a href="index.html">Home</a>
-        <a href="catalog.html" >Catalog</a>
+        <a href="catalog.html">Catalog</a>
         <a href="product.html">Product</a>
         <a href="cart.html">Cart</a>
         <a href="checkout.html">Checkout</a>
         <a href="account.html">Account</a>
-        <a href="dashboard.html class="active"">Dashboard</a>
+        <a href="dashboard.html" class="active">Dashboard</a>
       </nav>
 
-  <main class="content">
+      <div class="nav-actions">
+        <a href="account.html" class="btn btn-dark small">Login</a>
+        <a href="catalog.html" class="btn btn-primary small">Explore Store</a>
+      </div>
+    </header>
+
+  <main class="content" id="dashboard-overview">
         <div class="breadcrumb">Screen 7 • Seller/Admin dashboard</div>
         <h1 class="page-title">Operational dashboard for smart store management</h1>
         <p class="page-subtitle">Monitor revenue, orders, listings, and fulfillment activity from one clean control center.</p>
 
         <div class="action-bar">
-            <button class="btn-back">Back to store</button>
-            <button class="btn-add">Add new listing</button>
+            <button type="button" class="btn-back" data-href="catalog.html">Back to store</button>
+            <button type="button" class="btn-add">Add new listing</button>
         </div>
 
         <!-- Statistics Cards -->
-        <div class="stats-grid">
+        <div class="stats-grid" id="stats">
             <div class="stat-card">
                 <span class="label">Total sales</span>
                 <div class="value">SAR 84,320</div>
@@ -111,10 +119,10 @@
         </div>
 
         <!-- Table Section -->
-        <div class="card table-card">
+        <div class="card table-card" id="recent-orders">
             <div class="table-header">
                 <h3>Recent orders</h3>
-                <button class="btn-live">Live prototype table</button>
+                <button type="button" class="btn-live" data-target="#recent-orders">Live prototype table</button>
             </div>
             <table class="orders-table">
                 <thead>
@@ -138,7 +146,9 @@
             </table>
         </div>
     </main>
+    <footer class="footer">© 2026 Najd Tech Store</footer>
 
 </div>
+<script src="script.js"></script>
 </body>
 </html>
