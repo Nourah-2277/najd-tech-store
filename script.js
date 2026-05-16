@@ -71,36 +71,81 @@ document.addEventListener('DOMContentLoaded', () => {
     filterProducts();
   }
 
-  // Product page: show selected category, add to cart, save, chat
-  const productSections = Array.from(document.querySelectorAll('.product-page'));
-  if (productSections.length) {
-    const params = new URLSearchParams(window.location.search);
-    const selectedCategory = params.get('category') || 'laptops';
-    let selected = productSections.find(section => section.dataset.category === selectedCategory) || productSections[0];
+  // ── Product page ──
+  const isProductPage = document.getElementById('product-details');
+  if (isProductPage) {
 
-    productSections.forEach(section => {
-      section.style.display = section === selected ? 'flex' : 'none';
-    });
+    const products = {
+      novabook:   { name: 'NovaBook X14 Pro',   icon: '💻', price: 'SAR 4,299', rating: '⭐ 4.9', cat: 'Laptops',   badge: 'Best seller',  badgeCls: 'best-seller',  desc: 'A sleek high-performance laptop for students, creators, and professionals.', specs: [{ icon:'⚙️', title:'Intel Core i7', sub:'Smooth multitasking' }, { icon:'🧠', title:'16GB RAM / 512GB SSD', sub:'Fast launch speed' }, { icon:'🔋', title:'14-hour battery', sub:'Optimized for all-day use' }, { icon:'🛡️', title:'Secure checkout', sub:'Protected order flow' }] },
+      aerophone:  { name: 'AeroPhone Ultra',    icon: '📱', price: 'SAR 3,699', rating: '⭐ 4.8', cat: 'Phones',    badge: 'New arrival',  badgeCls: 'new-arrival',  desc: 'A next-gen flagship smartphone with AI camera and all-day battery.', specs: [{ icon:'📷', title:'200MP AI Camera', sub:'Stunning photos day and night' }, { icon:'⚡', title:'Snapdragon 8 Gen 3', sub:'Ultra-fast performance' }, { icon:'🔋', title:'5000mAh Battery', sub:'45W fast charging' }, { icon:'🛡️', title:'2-Year Warranty', sub:'Full regional coverage' }] },
+      echopods:   { name: 'EchoPods Max',       icon: '🎧', price: 'SAR 649',   rating: '⭐ 4.7', cat: 'Audio',     badge: 'Popular',      badgeCls: 'popular',      desc: 'Premium wireless earbuds with noise cancellation and custom sound profile.', specs: [{ icon:'🔇', title:'Active Noise Cancellation', sub:'Block out the world' }, { icon:'🎵', title:'Custom Audio Driver', sub:'Deep bass, crisp highs' }, { icon:'🔋', title:'36h Total Battery', sub:'With charging case' }, { icon:'📶', title:'Bluetooth 5.3', sub:'Low-latency connection' }] },
+      pulsewatch: { name: 'Pulse Watch S3',     icon: '⌚', price: 'SAR 899',   rating: '⭐ 4.8', cat: 'Wearables', badge: 'Top rated',    badgeCls: 'top-rated',    desc: 'A premium smartwatch that tracks health and productivity in one sleek wearable.', specs: [{ icon:'❤️', title:'Health Tracking', sub:'Heart rate, SpO2, sleep' }, { icon:'🏃', title:'GPS + Sports Modes', sub:'100+ workout types' }, { icon:'🔋', title:'7-Day Battery', sub:'Always-on display' }, { icon:'💧', title:'5ATM Water Resistant', sub:'Swim-proof build' }] },
+      visionpad:  { name: 'VisionPad Air',      icon: '🖥️', price: 'SAR 2,899', rating: '⭐ 4.6', cat: 'Laptops',   badge: 'Student pick', badgeCls: 'student-pick', desc: 'A lightweight powerhouse tablet with M2 chip and stunning 12.9" display.', specs: [{ icon:'🖥️', title:'12.9" Liquid Retina', sub:'ProMotion 120Hz display' }, { icon:'⚙️', title:'M2 Chip', sub:'Desktop-class performance' }, { icon:'🔋', title:'10-Hour Battery', sub:'Work all day' }, { icon:'✏️', title:'Pencil Support', sub:'Perfect for notes and art' }] },
+      snapcam:    { name: 'SnapCam 8K',         icon: '📷', price: 'SAR 1,499', rating: '⭐ 4.7', cat: 'Audio',     badge: 'Creator gear', badgeCls: 'creator-gear', desc: 'A professional mirrorless camera with 8K video and AI autofocus.', specs: [{ icon:'🎥', title:'8K Video Recording', sub:'30fps cinematic quality' }, { icon:'🤖', title:'AI Subject Tracking', sub:'Never miss a moment' }, { icon:'🔋', title:'600-Shot Battery', sub:'Shoot all day' }, { icon:'💾', title:'Dual SD Card Slots', sub:'Backup while you shoot' }] },
+      gamecore:   { name: 'GameCore Mini',      icon: '🎮', price: 'SAR 2,399', rating: '⭐ 4.5', cat: 'Phones',    badge: 'Hot deal',     badgeCls: 'hot-deal',     desc: 'A compact gaming console with 4K support and regional game store.', specs: [{ icon:'🎮', title:'4K @ 120fps Gaming', sub:'Ultra-smooth gameplay' }, { icon:'💾', title:'1TB NVMe SSD', sub:'Zero load times' }, { icon:'📶', title:'Wi-Fi 6E + Bluetooth', sub:'Lag-free online gaming' }, { icon:'🌐', title:'Regional Game Store', sub:'Arabic content included' }] },
+      fitband:    { name: 'FitBand Neo',        icon: '📿', price: 'SAR 349',   rating: '⭐ 4.4', cat: 'Wearables', badge: 'Budget smart', badgeCls: 'budget-smart', desc: 'An affordable smart fitness band with health tracking and AMOLED display.', specs: [{ icon:'❤️', title:'Heart Rate Monitor', sub:'24/7 continuous tracking' }, { icon:'😴', title:'Sleep Analysis', sub:'Smart sleep stage tracking' }, { icon:'🔋', title:'14-Day Battery', sub:'Worry-free wearable' }, { icon:'💧', title:'Water Resistant', sub:'Splash and sweat proof' }] },
+    };
 
-    document.querySelectorAll('.addtocart').forEach(button => {
-      button.addEventListener('click', () => {
-        const productName = button.closest('.product-page')?.querySelector('h1')?.textContent || 'Product';
-        alert(`✅ ${productName} was added to your cart.`);
-        goTo('cart.html#cart-items');
+    // Load selected product into detail view
+    const loadProduct = (key) => {
+      const d = products[key];
+      if (!d) return;
+      document.getElementById('product-title').textContent  = d.name;
+      document.getElementById('product-name').textContent   = d.name;
+      document.getElementById('product-icon').textContent   = d.icon;
+      document.getElementById('product-price').textContent  = d.price;
+      document.getElementById('product-rating').textContent = d.rating;
+      document.getElementById('product-desc').textContent   = d.desc;
+      document.getElementById('specs-list').innerHTML = d.specs.map(s => `
+        <div class="spec-item">
+          <div class="spec-icon-bg">${s.icon}</div>
+          <div class="spec-text"><strong>${s.title}</strong><p>${s.sub}</p></div>
+        </div>`).join('');
+      // Scroll to top of detail
+      document.getElementById('product-view').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    };
+
+    // Render all products grid
+    const grid = document.getElementById('all-products-grid');
+    if (grid) {
+      grid.innerHTML = Object.entries(products).map(([key, d]) => `
+        <div class="product-card" data-product="${key}" style="cursor:pointer;">
+          <div class="image-container">
+            <span class="badge ${d.badgeCls}">${d.badge}</span>
+            <div class="product-icon">${d.icon}</div>
+          </div>
+          <div class="product-info-row">
+            <h3>${d.name}</h3>
+            <span class="rating">${d.rating}</span>
+          </div>
+          <p class="description">${d.cat} • Smartly selected for modern buyers.</p>
+          <div class="product-footer">
+            <h4>${d.price}</h4>
+          </div>
+        </div>`).join('');
+
+      // Click any card → load it in detail view
+      grid.querySelectorAll('.product-card').forEach(card => {
+        card.addEventListener('click', () => loadProduct(card.dataset.product));
       });
-    });
+    }
 
-    document.querySelectorAll('.save').forEach(button => {
-      button.addEventListener('click', () => {
-        const productName = button.closest('.product-page')?.querySelector('h1')?.textContent || 'Product';
-        alert(`${productName} saved successfully.`);
-      });
-    });
+    // Load default product
+    const urlParams = new URLSearchParams(window.location.search);
+    loadProduct(urlParams.get('product') || 'novabook');
 
-    document.querySelectorAll('.chat').forEach(button => {
-      button.addEventListener('click', () => {
-        window.open('https://wa.me/966538380082', '_blank', 'noopener');
-      });
+    // Action buttons
+    document.querySelector('.btn-add-cart')?.addEventListener('click', () => {
+      const name = document.getElementById('product-name').textContent;
+      alert(`✅ ${name} was added to your cart.`);
+      goTo('cart.html');
+    });
+    document.querySelector('.btn-save-item')?.addEventListener('click', () => {
+      const name = document.getElementById('product-name').textContent;
+      alert(`💾 ${name} saved successfully.`);
+    });
+    document.querySelector('.btn-chat-seller')?.addEventListener('click', () => {
+      window.open('https://wa.me/966538380082', '_blank', 'noopener');
     });
   }
 
