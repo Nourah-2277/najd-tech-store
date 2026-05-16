@@ -1,7 +1,7 @@
-// Najd Tech Store — corrected interactive script
+// Najd Tech Store
 
 document.addEventListener('DOMContentLoaded', () => {
-  // Shared helpers
+  
   const goTo = (url) => { window.location.href = url; };
   const scrollToTarget = (selector) => {
     const target = document.querySelector(selector);
@@ -71,8 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
     filterProducts();
   }
 
- Product page 
-  
+  // ── Product page ──
   const isProductPage = document.getElementById('product-details');
   if (isProductPage) {
 
@@ -125,17 +124,17 @@ document.addEventListener('DOMContentLoaded', () => {
           </div>
         </div>`).join('');
 
-      // Click any card → load it in detail view
+      
       grid.querySelectorAll('.product-card').forEach(card => {
         card.addEventListener('click', () => loadProduct(card.dataset.product));
       });
     }
 
-    // Load default product
+   
     const urlParams = new URLSearchParams(window.location.search);
     loadProduct(urlParams.get('product') || 'novabook');
 
-    // Action buttons
+    
     document.querySelector('.btn-add-cart')?.addEventListener('click', () => {
       const name = document.getElementById('product-name').textContent;
       alert(`✅ ${name} was added to your cart.`);
@@ -150,7 +149,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Cart page: quantity controls and totals
+  // Cart page
   const cartItems = document.querySelectorAll('#cart-items .product-card');
   if (cartItems.length) {
     const cleanNumber = (text) => Number(String(text).replace(/[^0-9]/g, '')) || 0;
@@ -198,7 +197,7 @@ document.addEventListener('DOMContentLoaded', () => {
     updateCartTotal();
   }
 
-  // Checkout page: form validation and order confirmation
+  // Checkout page
   const checkoutForm = document.querySelector('.checkout-form');
   const placeOrderBtn = document.querySelector('.checkout-btn');
   if (checkoutForm && placeOrderBtn) {
@@ -226,7 +225,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Account page: login/register tab and validation
+  // Account page
   const authForm = document.querySelector('.auth-form');
   if (authForm) {
     const tabs = document.querySelectorAll('.tab');
