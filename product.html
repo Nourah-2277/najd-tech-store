@@ -8,7 +8,7 @@
 </head>
 <body>
   <div class="page-shell">
-    
+
     <header class="topbar">
       <div class="brand">
         <a class="brand-logo" href="index.html" aria-label="Najd Tech Store home">N</a>
@@ -17,7 +17,6 @@
           <p>Smart gadgets marketplace</p>
         </div>
       </div>
-
       <nav class="nav-links" aria-label="Main navigation">
         <a href="index.html">Home</a>
         <a href="catalog.html">Catalog</a>
@@ -27,34 +26,33 @@
         <a href="account.html">Account</a>
         <a href="dashboard.html">Dashboard</a>
       </nav>
-
       <div class="nav-actions">
-        <a href="login.html" class="btn btn-dark small">Login</a>
+        <a href="account.html" class="btn btn-dark small">Login</a>
         <a href="catalog.html" class="btn btn-primary small">Explore Store</a>
       </div>
     </header>
 
     <main class="container" id="product-details">
-      
+
       <p class="product-breadcrumb">Screen 3 • Product details</p>
-      <h1 class="product-page-title">NovaBook X14 Pro</h1>
+      <h1 class="product-page-title" id="product-title">NovaBook X14 Pro</h1>
       <p class="product-subtitle">Premium ultrabook concept page with smart specs, trust signals, and conversion elements.</p>
 
-      <div class="product-layout-grid">
-        
+      <!-- PRODUCT DETAIL VIEW (shown when a product is selected) -->
+      <div class="product-layout-grid" id="product-view">
+
         <div class="gallery-section">
           <div class="main-image-box">
-              <span class="main-icon">💻</span>
+            <span id="product-icon" style="font-size:90px;">💻</span>
           </div>
           <div class="thumbnails-row">
-              <div class="thumb-box"></div>
-              <div class="thumb-box"></div>
-              <div class="thumb-box"></div>
+            <div class="thumb-box"></div>
+            <div class="thumb-box"></div>
+            <div class="thumb-box"></div>
           </div>
         </div>
 
         <div class="details-section">
-          
           <div class="status-badges">
             <span class="badge-status">In stock</span>
             <span class="badge-status">2-year warranty</span>
@@ -62,70 +60,38 @@
           </div>
 
           <div class="product-header-info">
-            <h2>NovaBook X14 Pro</h2>
-            <div class="stars-rating">⭐⭐⭐⭐⭐</div>
+            <h2 id="product-name">NovaBook X14 Pro</h2>
+            <div class="stars-rating" id="product-rating">⭐⭐⭐⭐⭐</div>
           </div>
-          
+
           <p class="seller-info">By Najd Verified Seller • Riyadh Fulfillment</p>
-          
+
           <div class="price-row">
-            <span class="price-amount">SAR 4,299</span>
+            <span class="price-amount" id="product-price">SAR 4,299</span>
             <span class="delivery-tag">Free express delivery</span>
           </div>
 
-          <p class="product-brief">
-            A sleek high-performance laptop designed for students, creators, and professionals. 
-            It combines speed, battery efficiency, and a lightweight aluminum profile for daily productivity and premium mobility.
-          </p>
+          <p class="product-brief" id="product-desc"></p>
 
-          <div class="specs-list">
-            <div class="spec-item">
-              <div class="spec-icon-bg">⚙️</div>
-              <div class="spec-text">
-                <strong>Intel Core i7</strong>
-                <p>Smooth multitasking and daily productivity</p>
-              </div>
-            </div>
-
-            <div class="spec-item">
-              <div class="spec-icon-bg">🧠</div>
-              <div class="spec-text">
-                <strong>16GB RAM / 512GB SSD</strong>
-                <p>Fast launch speed and responsive storage</p>
-              </div>
-            </div>
-
-            <div class="spec-item">
-              <div class="spec-icon-bg">🔋</div>
-              <div class="spec-text">
-                <strong>14-hour battery</strong>
-                <p>Optimized for all-day performance</p>
-              </div>
-            </div>
-
-            <div class="spec-item">
-              <div class="spec-icon-bg">🛡️</div>
-              <div class="spec-text">
-                <strong>Secure checkout</strong>
-                <p>Protected order flow with buyer confirmation</p>
-              </div>
-            </div>
-          </div>
+          <div class="specs-list" id="specs-list"></div>
 
           <div class="action-buttons-row">
             <button class="btn-action btn-add-cart">Add to cart</button>
             <button class="btn-action btn-save-item">Save item</button>
             <button class="btn-action btn-chat-seller">Chat with seller</button>
           </div>
-
         </div>
       </div>
+
+      <!-- ALL PRODUCTS GRID (shown below) -->
+      <h2 style="font-family:'Sora',sans-serif; font-size:22px; font-weight:800; margin:36px 0 16px;">All Products</h2>
+      <div class="products" id="all-products-grid"></div>
 
     </main>
 
     <footer class="footer">© 2026 Najd Tech Store</footer>
   </div>
-  
+
   <script src="script.js"></script>
 </body>
 </html>
