@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Home - Najd Tech Store</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account - Najd Tech Store</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
-  <div class="page-shell">
 
+<body>
+
+
+<div class="page-shell">
     <header class="topbar">
       <div class="brand">
         <a class="brand-logo" href="index.html" aria-label="Najd Tech Store home">N</a>
@@ -19,12 +21,12 @@
       </div>
 
       <nav class="nav-links" aria-label="Main navigation">
-        <a href="index.html" class="active">Home</a>
+        <a href="index.html">Home</a>
         <a href="catalog.html">Catalog</a>
         <a href="product.html">Product</a>
         <a href="cart.html">Cart</a>
         <a href="checkout.html">Checkout</a>
-        <a href="account.html">Account</a>
+        <a href="account.html" class="active">Account</a>
         <a href="dashboard.html">Dashboard</a>
       </nav>
 
@@ -34,124 +36,42 @@
       </div>
     </header>
 
-    <main class="hero-container">
-      <div class="hero-layout">
 
-        <div class="hero-text-side">
-          <span class="prototype-tag">⚡ Real-world e-commerce prototype • BIS 351</span>
+    <main>
+        <section class="login-intro" id="account-intro">
+            <h1>Join a smarter regional gadget marketplace.</h1>
+            <p>Buyers can create secure accounts to shop faster, while sellers can manage listings and track order activity from one dashboard.</p>
 
-          <h1 class="main-heading">
-            Buy and sell premium tech gadgets through one smart digital experience.
-          </h1>
-
-          <p class="hero-description">
-            Najd Tech Store is designed as a polished regional marketplace for phones, laptops, accessories, wearables, and gaming gear. The interface balances commercial credibility, smooth browsing, and seller management in one scalable product experience.
-          </p>
-
-          <div class="hero-actions">
-            <a href="catalog.html" class="btn btn-primary">Shop gadgets</a>
-            <a href="dashboard.html" class="btn btn-secondary">View seller dashboard</a>
-          </div>
-
-          <div class="stats-grid">
-            <div class="stat-box">
-              <h3>1,200+</h3>
-              <p>Products prepared for listing</p>
-            </div>
-            <div class="stat-box">
-              <h3>320</h3>
-              <p>Verified regional sellers</p>
-            </div>
-            <div class="stat-box">
-              <h3>96%</h3>
-              <p>Customer satisfaction target</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="hero-visual-side">
-          <div class="intelligence-card">
-            <h3>Live product intelligence</h3>
-            <p class="intel-sub">AI-like product discovery, stock awareness, and clean commerce flow.</p>
-
-            <div class="mock-dashboard-preview">
-              <span class="mock-pill">Smart recommendations</span>
-              <div class="mock-content-layout">
-                <div class="mock-grid-squares">
-                  <div class="square"></div>
-                  <div class="square"></div>
-                  <div class="square"></div>
-                  <div class="square"></div>
+            <div class="account-types">
+                <div class="account-type">
+                    <h3>Buyer account</h3>
+                    <p>Save favorites, manage addresses, and review orders quickly.</p>
                 </div>
-                <div class="mock-chart-circle">
-                  <div class="circle-progress"></div>
-                </div>
-              </div>
-              <p class="mock-footer-text">Fast checkout • Secure payments • Regional delivery</p>
-            </div>
-          </div>
-        </div>
 
-      </div>
+                <div class="account-type">
+                    <h3>Seller account</h3>
+                    <p>Publish gadgets, control pricing, and analyze sales signals.</p>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="login-section" id="login-form">
+            <h2>Welcome back</h2>
+
+            <form class="login-form" action="dashboard.html" method="post">
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" placeholder="Enter your email">
+
+                <label for="password">Password</label>
+                <input id="password" name="password" type="password" placeholder="Enter your password">
+
+                <button type="submit" class="login-btn">Login to dashboard</button>
+            </form>
+        </section>
     </main>
-
-    <section class="categories-section">
-      <div class="categories-header">
-        <div>
-          <h2>Featured categories</h2>
-          <p>Organized browsing experience for key tech segments.</p>
-        </div>
-        <div class="quick-filter-pills">
-          <span class="pill-filter">Phones</span>
-          <span class="pill-filter">Laptops</span>
-          <span class="pill-filter">Wearables</span>
-          <span class="pill-filter">Gaming</span>
-          <span class="pill-filter">Accessories</span>
-        </div>
-      </div>
-
-      <div class="categories-grid">
-
-        <div class="category-card">
-          <div class="category-icon-wrapper">
-            <span class="cat-emoji">📱</span>
-          </div>
-          <h3>Smartphones</h3>
-          <p>Flagship and value devices with warranty-ready listings.</p>
-        </div>
-
-        <div class="category-card">
-          <div class="category-icon-wrapper">
-            <span class="cat-emoji">💻</span>
-          </div>
-          <h3>Laptops</h3>
-          <p>Work, study, and creator models with full specifications.</p>
-        </div>
-
-        <div class="category-card">
-          <div class="category-icon-wrapper">
-            <span class="cat-emoji">⌚</span>
-          </div>
-          <h3>Wearables</h3>
-          <p>Smartwatches, fitness devices, and connected accessories.</p>
-        </div>
-
-        <div class="category-card">
-          <div class="category-icon-wrapper">
-            <span class="cat-emoji">🎮</span>
-          </div>
-          <h3>Gaming</h3>
-          <p>Consoles, controllers, and gamer-first performance gear.</p>
-        </div>
-
-      </div>
-    </section>
-
-    <footer class="footer">
-      © 2026 Najd Tech Store
-    </footer>
-
-  </div>
-  <script src="script.js"></script>
+<footer class="footer">© 2026 Najd Tech Store</footer>
+</div>
+<script src="script.js"></script>
 </body>
 </html>
