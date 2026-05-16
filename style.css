@@ -1,7 +1,6 @@
-
-   Najd Tech Store — Full Redesign v3
-   Matches UI/UX prototype exactly
-
+*/ 
+   Najd Tech Store
+*/
 
 @import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap');
 
@@ -49,7 +48,9 @@ ul, ol { list-style: none; }
   margin: 20px auto 40px;
 }
 
+/* 
    TOPBAR — unified across all pages
+*/
 .topbar {
   position: sticky;
   top: 14px;
@@ -94,8 +95,9 @@ ul, ol { list-style: none; }
 }
 .nav-actions { display: flex; align-items: center; gap: 8px; flex-shrink: 0; }
 
+/* 
    BUTTONS
-
+*/
 .btn, .login-btn, .btn-back, .btn-add, .btn-live {
   display: inline-flex; align-items: center; justify-content: center; gap: 7px;
   min-height: 38px; padding: 9px 18px;
@@ -119,8 +121,9 @@ ul, ol { list-style: none; }
 }
 .wide { width: 100%; }
 
+/* 
    SHARED
-
+ */
 main, .container, .content { margin-top: 28px; }
 section { scroll-margin-top: 110px; }
 .panel, .card, .login-intro, .login-section, .intelligence-card {
@@ -156,8 +159,9 @@ section { scroll-margin-top: 110px; }
 .hero-tags { display: flex; gap: 8px; flex-wrap: wrap; }
 .footer { margin: 36px 0 10px; text-align: center; color: var(--muted); font-size: 13px; }
 
+/* 
    HOME — HERO
-
+ */
 .hero-container { margin-top: 28px; }
 .hero-layout {
   display: grid; grid-template-columns: 1.2fr .85fr;
@@ -266,8 +270,9 @@ section { scroll-margin-top: 110px; }
 .category-card h3 { font-family: 'Sora', sans-serif; font-size: 15px; font-weight: 700; margin-bottom: 5px; }
 .category-card p  { font-size: 12px; color: var(--muted); }
 
+/* 
    CATALOG PAGE
-
+*/
 #catalog-controls { margin-top: 28px; }
 .catalog-overview {
   display: flex; justify-content: space-between; align-items: center;
@@ -301,8 +306,7 @@ section { scroll-margin-top: 110px; }
 select option { background: #0d1728; }
 .optionfilter { margin-bottom: 10px; }
 
- Badge
-
+/* Badge */
 .badge {
   position: absolute; top: 10px; right: 10px;
   padding: 3px 10px; border-radius: 999px;
@@ -326,8 +330,7 @@ select option { background: #0d1728; }
   gap: 16px; margin-top: 16px;
 }
 
- Product card 
-
+/* ── Product card ── */
 .product-card {
   position: relative;
   background: linear-gradient(160deg, rgba(14,22,44,.98), rgba(10,17,32,.99));
@@ -377,8 +380,9 @@ select option { background: #0d1728; }
   color: var(--muted); grid-column: 1 / -1; font-size: 15px;
 }
 
+/* 
    PRODUCT DETAIL PAGE
-
+*/
 .product-page-title {
   font-family: 'Sora', sans-serif;
   font-size: clamp(24px,4vw,36px); font-weight: 800; margin: 12px 0 8px;
@@ -457,8 +461,9 @@ select option { background: #0d1728; }
 .btn-save-item, .save { background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.10) !important; color: var(--text); }
 .btn-chat-seller, .chat { background: rgba(124,110,247,.16); border: 1px solid rgba(124,110,247,.28) !important; color: #c4bbff; }
 
+/* 
    CART PAGE
-
+*/
 #cart-items { margin-top: 24px; }
 #cart-items .product-card {
   background: linear-gradient(160deg, var(--surface-2), rgba(12,19,38,.99));
@@ -508,8 +513,9 @@ select option { background: #0d1728; }
 .pay-now strong { color: var(--green); font-family: 'Sora', sans-serif; }
 .note { margin-top: 10px; font-size: 12px; color: var(--muted); text-align: center; }
 
+/* 
    CHECKOUT
-
+ */
 .checkout-form { display: flex; flex-direction: column; gap: 16px; }
 .field-grid.two { display: grid; grid-template-columns: repeat(2,1fr); gap: 14px; }
 .field.full { grid-column: 1 / -1; }
@@ -523,8 +529,9 @@ select option { background: #0d1728; }
 }
 .checkout-btn:hover { transform: translateY(-1px); opacity: .9; }
 
+/* 
    ACCOUNT / LOGIN
-
+ */
 .account-grid { display: grid; grid-template-columns: 1.05fr .95fr; gap: 22px; align-items: stretch; }
 .promo-panel, .auth-panel { padding: 30px; }
 .promo-panel h2 {
@@ -562,8 +569,9 @@ select option { background: #0d1728; }
 .login-btn { min-height: 44px; font-size: 14px; }
 .account-types { display: grid; grid-template-columns: repeat(auto-fit,minmax(200px,1fr)); gap: 12px; margin-top: 16px; }
 
+/* 
    DASHBOARD
-
+ */
 .action-bar { display: flex; gap: 10px; margin: 20px 0 24px; flex-wrap: wrap; }
 .stats-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 14px; margin-bottom: 20px; }
 .stat-card {
@@ -614,8 +622,9 @@ select option { background: #0d1728; }
   padding: 3px 10px; border-radius: 999px; font-size: 11px; font-weight: 700; white-space: nowrap;
 }
 
+/* 
    RESPONSIVE
-
+*/
 @media (max-width: 1080px) {
   .topbar { grid-template-columns: 1fr; gap: 10px; }
   .nav-links { justify-content: flex-start; }
