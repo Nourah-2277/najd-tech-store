@@ -1,7 +1,6 @@
-// Najd Tech Store
 
 document.addEventListener('DOMContentLoaded', () => {
-  
+
   const goTo = (url) => { window.location.href = url; };
   const scrollToTarget = (selector) => {
     const target = document.querySelector(selector);
@@ -124,17 +123,17 @@ document.addEventListener('DOMContentLoaded', () => {
           </div>
         </div>`).join('');
 
-      
+
       grid.querySelectorAll('.product-card').forEach(card => {
         card.addEventListener('click', () => loadProduct(card.dataset.product));
       });
     }
 
-   
+
     const urlParams = new URLSearchParams(window.location.search);
     loadProduct(urlParams.get('product') || 'novabook');
 
-    
+
     document.querySelector('.btn-add-cart')?.addEventListener('click', () => {
       const name = document.getElementById('product-name').textContent;
       alert(`✅ ${name} was added to your cart.`);
