@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" >
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Najd Tech Store - Catalog</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Najd Tech Store - Checkout</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
-<div class="page-shell">
+  <div class="page-shell">
     <header class="topbar">
       <div class="brand">
         <a class="brand-logo" href="index.html" aria-label="Najd Tech Store home">N</a>
@@ -20,172 +19,109 @@
 
       <nav class="nav-links" aria-label="Main navigation">
         <a href="index.html">Home</a>
-        <a href="catalog.html" class="active">Catalog</a>
+        <a href="catalog.html#products">Catalog</a>
         <a href="product.html">Product</a>
         <a href="cart.html">Cart</a>
-        <a href="checkout.html">Checkout</a>
+        <a href="checkout.html" class="active">Checkout</a>
         <a href="account.html">Account</a>
         <a href="dashboard.html">Dashboard</a>
       </nav>
 
       <div class="nav-actions">
         <a href="account.html" class="btn btn-dark small">Login</a>
-        <a href="catalog.html#products" class="btn btn-primary small">Explore Store</a>
+        <a href="catalog.html" class="btn btn-primary small">Explore Store</a>
       </div>
     </header>
 
-<section id="catalog-controls">
-    <div class="catalog-overview">
+    <main class="container">
+      <section class="hero-row">
         <div>
-            <h1>DISCOVER TRENDING GADGETS</h1>
-            <p>search, filter, and browse product through a premium marketplace layout</p>
+          <span class="pill muted">Screen 5 • Checkout</span>
+          <h2>Secure checkout experience</h2>
+          <p class="subtext">Structured purchase flow for customer details, address, payment, and order confirmation.</p>
         </div>
-        <button class="btn btn-primary">Open selected product</button>
-    </div>
 
-    <div class="filters">
-        <input id="searchInput" type="text" placeholder="Search for iphone, lenovo, airpods..." />
-        <select id="category-Filter">
-          <option value="all">All categories</option>
-          <option value="phones">Phones</option>
-          <option value="laptops">Laptops</option>
-          <option value="wearables">Wearables</option>
-          <option value="tablet">Tablet</option>
-          <option value="gaming">Gaming</option>
-          <option value="camera">Camera</option>
-            <option value="headphone">headphone</option>
-        </select>
-        <select id="sortSelect">
-          <option>Sort: Featured</option>
-          <option>Price Low</option>
-          <option>Price High</option>
-        </select>
-    </div>
+        <div class="hero-tags">
+          <span class="tag">Encrypted</span>
+          <span class="tag">Fast checkout</span>
+        </div>
+      </section>
 
-    <div class="optionfilter">
-        <button type="button" id="applyFiltersButton" class="btn btn-secondary">Apply filters</button>
-    </div>
-</section>
+      <section class="content-grid" id="checkout-form">
+        <div class="panel form-panel">
+          <form class="checkout-form">
+            <div class="field-grid two">
+              <div class="field">
+                <label>First name</label>
+                <input type="text" placeholder="Abeer" />
+              </div>
+              <div class="field">
+                <label>Last name</label>
+                <input type="text" placeholder="Alqahtani" />
+              </div>
+            </div>
 
-<section class="products" id="products">
-    <p id="noResults" style="display:none; text-align:center; color:#f87171; font-size:18px; margin-top:20px;">No results found</p>
+            <div class="field-grid two">
+              <div class="field">
+                <label>Email</label>
+                <input type="email" placeholder="name@example.com" />
+              </div>
+              <div class="field">
+                <label>Phone number</label>
+                <input type="text" placeholder="05XXXXXXXX" />
+              </div>
+            </div>
 
-    <div class="product-card" data-category="laptops" data-product="novabook">
-        <div class="image-container">
-          <span class="badge best-seller">Best seller</span>
-          <div class="product-icon" style="font-size:64px;display:grid;place-items:center;height:150px;">&#x1F4BB;</div>
-        </div>
-        <div class="product-info-row">
-          <h3>NovaBook X14 Pro</h3>
-          <span class="rating">⭐ 4.9</span>
-        </div>
-        <p class="description">Laptops • Smartly selected for modern buyers.</p>
-        <div class="product-footer">
-          <h4>SAR 4,299</h4>
-          <button class="btn-view">View</button>
-        </div>
-    </div>
+            <div class="field full">
+              <label>Delivery address</label>
+              <input type="text" placeholder="Street, district, city, postal code" />
+            </div>
 
-    <div class="product-card" data-category="phones" data-product="aerophone">
-        <div class="image-container">
-          <span class="badge new-arrival">New arrival</span>
-          <div class="product-icon" style="font-size:64px;display:grid;place-items:center;height:150px;">&#x1F4F1;</div>
+            <div class="field-grid two">
+              <div class="field">
+                <label>Payment method</label>
+                <select>
+                  <option>Mada</option>
+                  <option>Visa</option>
+                  <option>Mastercard</option>
+                  <option>Apple Pay</option>
+                </select>
+              </div>
+              <div class="field">
+                <label>Promo code</label>
+                <input type="text" placeholder="NAJD10" />
+              </div>
+            </div>
+          </form>
         </div>
-        <div class="product-info-row">
-          <h3>AeroPhone Ultra</h3>
-          <span class="rating">⭐ 4.8</span>
-        </div>
-        <p class="description">Phones • Smartly selected for modern buyers.</p>
-        <div class="product-footer">
-          <h4>SAR 3,699</h4>
-          <button class="btn-view">View</button>
-        </div>
-    </div>
 
-    <div class="product-card" data-category="headphone" data-product="echopods">
-        <div class="image-container">
-          <span class="badge popular">Popular</span>
-          <div class="product-icon" style="font-size:64px;display:grid;place-items:center;height:150px;">&#x1F3A7;</div>
-        </div>
-        <div class="product-info-row">
-          <h3>EchoPods Max</h3>
-          <span class="rating">⭐ 4.7</span>
-        </div>
-        <p class="description">Audio • Smartly selected for modern buyers.</p>
-        <div class="product-footer">
-          <h4>SAR 649</h4>
-          <button class="btn-view">View</button>
-        </div>
-    </div>
+        <aside class="panel payment-panel" id="payment-summary">
+          <h3>Final payment</h3>
 
-    <div class="product-card" data-category="wearables" data-product="pulsewatch">
-        <div class="image-container">
-          <span class="badge top-rated">Top rated</span>
-          <div class="product-icon" style="font-size:64px;display:grid;place-items:center;height:150px;">&#x231A;</div>
-        </div>
-        <div class="product-info-row">
-          <h3>Pulse Watch S3</h3>
-          <span class="rating">⭐ 4.8</span>
-        </div>
-        <p class="description">Wearables • Smartly selected for modern buyers.</p>
-        <div class="product-footer">
-          <h4>SAR 899</h4>
-          <button class="btn-view">View</button>
-        </div>
-    </div>
+          <div class="payment-row">
+            <span>Products</span>
+            <strong>3 items</strong>
+          </div>
+          <div class="payment-row">
+            <span>Total amount</span>
+            <strong>SAR 5,727</strong>
+          </div>
+          <div class="payment-row">
+            <span>Estimated delivery</span>
+            <strong>1–2 days</strong>
+          </div>
 
-    <div class="product-card" data-category="tablet" data-product="visionpad">
-        <div class="image-container">
-          <span class="badge student-pick">Student pick</span>
-          <div class="product-icon" style="font-size:64px;display:grid;place-items:center;height:150px;">&#x1F5A5;&#xFE0F;</div>
-        </div>
-        <div class="product-info-row">
-          <h3>VisionPad Air</h3>
-          <span class="rating">⭐ 4.6</span>
-        </div>
-        <p class="description">Laptops • Smartly selected for modern buyers.</p>
-        <div class="product-footer">
-          <h4>SAR 2,899</h4>
-          <button class="btn-view">View</button>
-        </div>
-    </div>
+          <div class="pay-now">
+            <span>Pay now</span>
+            <strong>SAR 5,727</strong>
+          </div>
 
-    <div class="product-card" data-category="camera" data-product="snapcam">
-        <div class="image-container">
-          <span class="badge creator-gear">Creator gear</span>
-          <div class="product-icon" style="font-size:64px;display:grid;place-items:center;height:150px;">&#x1F4F7;</div>
-        </div>
-        <div class="product-info-row">
-          <h3>SnapCam 8K</h3>
-          <span class="rating">⭐ 4.7</span>
-        </div>
-        <p class="description">Audio • Smartly selected for modern buyers.</p>
-        <div class="product-footer">
-          <h4>SAR 1,499</h4>
-          <button class="btn-view">View</button>
-        </div>
-    </div>
-
-    <div class="product-card" data-category="gaming" data-product="gamecore">
-        <div class="image-container">
-          <span class="badge hot-deal">Hot deal</span>
-          <div class="product-icon" style="font-size:64px;display:grid;place-items:center;height:150px;">&#x1F3AE;</div>
-        </div>
-        <div class="product-info-row">
-          <h3>GameCore Mini</h3>
-          <span class="rating">⭐ 4.5</span>
-        </div>
-        <p class="description">Phones • Smartly selected for modern buyers.</p>
-        <div class="product-footer">
-          <h4>SAR 2,399</h4>
-          <button class="btn-view">View</button>
-        </div>
-    </div>
-
-</section>
-
-<footer class="footer">© 2026 Najd Tech Store</footer>
+          <button type="button" class="btn btn-primary wide checkout-btn">Place order</button>
+          <p class="note">Your order details will be confirmed after payment.</p>
+        </aside>
+      </section>
+    </main>
+  </div>
 <script src="script.js"></script>
-</div>
 </body>
 </html>
