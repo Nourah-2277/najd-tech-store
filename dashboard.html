@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Home - Najd Tech Store</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <title>Dashboard-Najd Tech Store</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet"  href="style.css">
 </head>
-<body>
-  <div class="page-shell">
 
+<body>
+
+
+<div class="page-shell">
     <header class="topbar">
       <div class="brand">
         <a class="brand-logo" href="index.html" aria-label="Najd Tech Store home">N</a>
@@ -19,13 +21,13 @@
       </div>
 
       <nav class="nav-links" aria-label="Main navigation">
-        <a href="index.html" class="active">Home</a>
+        <a href="index.html">Home</a>
         <a href="catalog.html">Catalog</a>
         <a href="product.html">Product</a>
         <a href="cart.html">Cart</a>
         <a href="checkout.html">Checkout</a>
         <a href="account.html">Account</a>
-        <a href="dashboard.html">Dashboard</a>
+        <a href="dashboard.html" class="active">Dashboard</a>
       </nav>
 
       <div class="nav-actions">
@@ -34,124 +36,119 @@
       </div>
     </header>
 
-    <main class="hero-container">
-      <div class="hero-layout">
+  <main class="content" id="dashboard-overview">
+        <div class="breadcrumb">Screen 7 • Seller/Admin dashboard</div>
+        <h1 class="page-title">Operational dashboard for smart store management</h1>
+        <p class="page-subtitle">Monitor revenue, orders, listings, and fulfillment activity from one clean control center.</p>
 
-        <div class="hero-text-side">
-          <span class="prototype-tag">⚡ Real-world e-commerce prototype • BIS 351</span>
-
-          <h1 class="main-heading">
-            Buy and sell premium tech gadgets through one smart digital experience.
-          </h1>
-
-          <p class="hero-description">
-            Najd Tech Store is designed as a polished regional marketplace for phones, laptops, accessories, wearables, and gaming gear. The interface balances commercial credibility, smooth browsing, and seller management in one scalable product experience.
-          </p>
-
-          <div class="hero-actions">
-            <a href="catalog.html" class="btn btn-primary">Shop gadgets</a>
-            <a href="dashboard.html" class="btn btn-secondary">View seller dashboard</a>
-          </div>
-
-          <div class="stats-grid">
-            <div class="stat-box">
-              <h3>1,200+</h3>
-              <p>Products prepared for listing</p>
-            </div>
-            <div class="stat-box">
-              <h3>320</h3>
-              <p>Verified regional sellers</p>
-            </div>
-            <div class="stat-box">
-              <h3>96%</h3>
-              <p>Customer satisfaction target</p>
-            </div>
-          </div>
+        <div class="action-bar">
+            <button type="button" class="btn-back" data-href="catalog.html">Back to store</button>
+            <button type="button" class="btn-add">Add new listing</button>
         </div>
 
-        <div class="hero-visual-side">
-          <div class="intelligence-card">
-            <h3>Live product intelligence</h3>
-            <p class="intel-sub">AI-like product discovery, stock awareness, and clean commerce flow.</p>
-
-            <div class="mock-dashboard-preview">
-              <span class="mock-pill">Smart recommendations</span>
-              <div class="mock-content-layout">
-                <div class="mock-grid-squares">
-                  <div class="square"><span class="sq-icon">📱</span></div>
-                  <div class="square"><span class="sq-icon">💻</span></div>
-                  <div class="square"><span class="sq-icon">🎧</span></div>
-                  <div class="square"><span class="sq-icon">⌚</span></div>
-                </div>
-                <div class="mock-chart-circle">
-                  <div class="circle-progress"></div>
-                </div>
-              </div>
-              <p class="mock-footer-text">Fast checkout • Secure payments • Regional delivery</p>
+        <!-- Statistics Cards -->
+        <div class="stats-grid" id="stats">
+            <div class="stat-card">
+                <span class="label">Total sales</span>
+                <div class="value">SAR 84,320</div>
+                <span class="trend positive">+12.4% this month</span>
             </div>
-          </div>
+            <div class="stat-card">
+                <span class="label">Orders</span>
+                <div class="value">248</div>
+                <span class="sub-label">18 pending fulfillment</span>
+            </div>
+            <div class="stat-card">
+                <span class="label">Active products</span>
+                <div class="value">126</div>
+                <span class="sub-label">8 low-stock alerts</span>
+            </div>
+            <div class="stat-card">
+                <span class="label">Seller rating</span>
+                <div class="value">4.9/5</div>
+                <span class="sub-label">Based on 1,032 reviews</span>
+            </div>
         </div>
 
-      </div>
+        <!-- Middle Section -->
+        <div class="dashboard-middle">
+            <!-- Chart Card -->
+            <div class="card chart-card">
+                <h3>Revenue trend</h3>
+                <div class="chart-area">
+                    <div class="bar" style="height: 40%;"></div>
+                    <div class="bar" style="height: 65%;"></div>
+                    <div class="bar" style="height: 55%;"></div>
+                    <div class="bar" style="height: 80%;"></div>
+                    <div class="bar" style="height: 85%;"></div>
+                    <div class="bar" style="height: 100%;"></div>
+                </div>
+                <div class="chart-labels">
+                    <span>Jan</span>
+                    <span>Jun</span>
+                </div>
+            </div>
+
+<!-- Focus Card -->
+            <div class="card focus-card">
+                <h3>Operational focus</h3>
+                <div class="focus-list">
+                    <div class="focus-item">
+                        <div class="icon-wrap orange">📦</div>
+                        <div class="focus-info">
+                            <h4>Order routing</h4>
+                            <p>Fast tracking for pending deliveries and packed orders</p>
+                        </div>
+                    </div>
+                    <div class="focus-item">
+                        <div class="icon-wrap blue">📋</div>
+                        <div class="focus-info">
+                            <h4>Listing control</h4>
+                            <p>Review products, pricing, and seller content quality</p>
+                        </div>
+                    </div>
+                    <div class="focus-item">
+                        <div class="icon-wrap yellow">🔔</div>
+                        <div class="focus-info">
+                            <h4>Smart alerts</h4>
+                            <p>Low stock, delayed orders, and refund risk detection</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Table Section -->
+        <div class="card table-card" id="recent-orders">
+            <div class="table-header">
+                <h3>Recent orders</h3>
+                <button type="button" class="btn-live" data-target="#recent-orders">Live prototype table</button>
+            </div>
+            <table class="orders-table">
+                <thead>
+                    <tr>
+                        <th>Order ID</th>
+                        <th>Customer</th>
+                        <th>Product</th>
+                        <th>Status</th>
+                        <th>Amount</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>#NTS-1042</td>
+                        <td>Sarah M.</td>
+                        <td>NovaBook X14 Pro</td>
+                        <td><span class="status-delivered">Delivered</span></td>
+                        <td>SAR 4,299</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </main>
+    <footer class="footer">© 2026 Najd Tech Store</footer>
 
-    <section class="categories-section">
-      <div class="categories-header">
-        <div>
-          <h2>Featured categories</h2>
-          <p>Organized browsing experience for key tech segments.</p>
-        </div>
-        <div class="quick-filter-pills">
-          <span class="pill-filter">Phones</span>
-          <span class="pill-filter">Laptops</span>
-          <span class="pill-filter">Wearables</span>
-          <span class="pill-filter">Gaming</span>
-          <span class="pill-filter">Accessories</span>
-        </div>
-      </div>
-
-      <div class="categories-grid">
-
-        <div class="category-card">
-          <div class="category-icon-wrapper">
-            <span class="cat-emoji">📱</span>
-          </div>
-          <h3>Smartphones</h3>
-          <p>Flagship and value devices with warranty-ready listings.</p>
-        </div>
-
-        <div class="category-card">
-          <div class="category-icon-wrapper">
-            <span class="cat-emoji">💻</span>
-          </div>
-          <h3>Laptops</h3>
-          <p>Work, study, and creator models with full specifications.</p>
-        </div>
-
-        <div class="category-card">
-          <div class="category-icon-wrapper">
-            <span class="cat-emoji">⌚</span>
-          </div>
-          <h3>Wearables</h3>
-          <p>Smartwatches, fitness devices, and connected accessories.</p>
-        </div>
-
-        <div class="category-card">
-          <div class="category-icon-wrapper">
-            <span class="cat-emoji">🎮</span>
-          </div>
-          <h3>Gaming</h3>
-          <p>Consoles, controllers, and gamer-first performance gear.</p>
-        </div>
-
-      </div>
-    </section>
-
-    <footer class="footer">
-      © 2026 Najd Tech Store
-    </footer>
-
-  </div>
-  <script src="script.js"></script>
+</div>
+<script src="script.js"></script>
 </body>
 </html>
