@@ -71,7 +71,8 @@ document.addEventListener('DOMContentLoaded', () => {
     filterProducts();
   }
 
-  // ── Product page ──
+ Product page 
+  
   const isProductPage = document.getElementById('product-details');
   if (isProductPage) {
 
