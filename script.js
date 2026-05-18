@@ -76,7 +76,7 @@ if (productsContainer) {
     window.location.href = `product.html?product=${productKey}`;
   });
 });
-
+}  
 
   // ── Product page ──
   const isProductPage = document.getElementById('product-details');
