@@ -15,8 +15,8 @@ document.addEventListener('DOMContentLoaded', () => {
     button.addEventListener('click', () => scrollToTarget(button.dataset.target));
   });
 
-  // Catalog: search, category filter, and sorting
-  const productsContainer = document.querySelector('.products');
+  // Catalog Page
+const productsContainer = document.querySelector('.products');
 if (productsContainer) {
   const searchInput = document.getElementById('searchInput');
   const categoryFilter = document.getElementById('category-Filter');
@@ -70,13 +70,16 @@ if (productsContainer) {
   filterProducts();
 
   document.querySelectorAll(".btn-view").forEach(button => {
-  button.addEventListener("click", function () {
-    const card = this.closest(".product-card");
-    const productKey = card.dataset.product;
-    window.location.href = `product.html?product=${productKey}`;
+    button.addEventListener("click", function () {
+      const card = this.closest(".product-card");
+      const productKey = card.dataset.product;
+      window.location.href = `product.html?product=${productKey}`;
+    });
   });
-});
-}  
+}
+
+
+
 
   // ── Product page ──
   const isProductPage = document.getElementById('product-details');
