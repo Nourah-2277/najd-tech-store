@@ -17,58 +17,67 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Catalog: search, category filter, and sorting
   const productsContainer = document.querySelector('.products');
-  if (productsContainer) {
-    const searchInput = document.getElementById('searchInput');
-    const categoryFilter = document.getElementById('category-Filter');
-    const sortSelect = document.getElementById('sortSelect');
-    const noResults = document.getElementById('noResults');
-    const applyFiltersButton = document.getElementById('applyFiltersButton');
+if (productsContainer) {
+  const searchInput = document.getElementById('searchInput');
+  const categoryFilter = document.getElementById('category-Filter');
+  const sortSelect = document.getElementById('sortSelect');
+  const noResults = document.getElementById('noResults');
+  const applyFiltersButton = document.getElementById('applyFiltersButton');
 
-    const filterProducts = () => {
-      const search = searchInput ? searchInput.value.trim().toLowerCase() : '';
-      const category = categoryFilter ? categoryFilter.value : 'all';
-      const cards = Array.from(productsContainer.querySelectorAll('.product-card'));
-      let found = false;
+  const filterProducts = () => {
+    const search = searchInput ? searchInput.value.trim().toLowerCase() : '';
+    const category = categoryFilter ? categoryFilter.value : 'all';
+    const cards = Array.from(productsContainer.querySelectorAll('.product-card'));
+    let found = false;
 
-      cards.forEach(card => {
-        const name = (card.querySelector('h3')?.textContent || '').toLowerCase();
-        const description = (card.querySelector('p')?.textContent || '').toLowerCase();
-        const cardCategory = card.dataset.category || '';
-        const matchesCategory = category === 'all' || cardCategory === category;
-        const matchesSearch = !search || name.includes(search) || description.includes(search);
-        const shouldShow = matchesCategory && matchesSearch;
-        card.style.display = shouldShow ? 'flex' : 'none';
-        if (shouldShow) found = true;
-      });
+    cards.forEach(card => {
+      const name = (card.querySelector('h3')?.textContent || '').toLowerCase();
+      const description = (card.querySelector('p')?.textContent || '').toLowerCase();
+      const cardCategory = card.dataset.category || '';
+      const matchesCategory = category === 'all' || cardCategory === category;
+      const matchesSearch = !search || name.includes(search) || description.includes(search);
+      const shouldShow = matchesCategory && matchesSearch;
+      card.style.display = shouldShow ? 'flex' : 'none';
+      if (shouldShow) found = true;
+    });
 
-      if (noResults) noResults.style.display = found ? 'none' : 'block';
-    };
+    if (noResults) noResults.style.display = found ? 'none' : 'block';
+  };
 
-    const sortProducts = () => {
-      const sort = sortSelect ? sortSelect.value : 'Sort: Featured';
-      const cards = Array.from(productsContainer.querySelectorAll('.product-card'));
-      cards.sort((a, b) => {
-        const priceA = Number((a.querySelector('h4')?.textContent || '').replace(/\D/g, '')) || 0;
-        const priceB = Number((b.querySelector('h4')?.textContent || '').replace(/\D/g, '')) || 0;
-        if (sort === 'Price Low') return priceA - priceB;
-        if (sort === 'Price High') return priceB - priceA;
-        return 0;
-      });
-      cards.forEach(card => productsContainer.appendChild(card));
-    };
+  const sortProducts = () => {
+    const sort = sortSelect ? sortSelect.value : 'Sort: Featured';
+    const cards = Array.from(productsContainer.querySelectorAll('.product-card'));
+    cards.sort((a, b) => {
+      const priceA = Number((a.querySelector('h4')?.textContent || '').replace(/\D/g, '')) || 0;
+      const priceB = Number((b.querySelector('h4')?.textContent || '').replace(/\D/g, '')) || 0;
+      if (sort === 'Price Low') return priceA - priceB;
+      if (sort === 'Price High') return priceB - priceA;
+      return 0;
+    });
+    cards.forEach(card => productsContainer.appendChild(card));
+  };
 
-    const params = new URLSearchParams(window.location.search);
-    const urlCategory = params.get('category');
-    if (urlCategory && categoryFilter) categoryFilter.value = urlCategory;
+  const params = new URLSearchParams(window.location.search);
+  const urlCategory = params.get('category');
+  if (urlCategory && categoryFilter) categoryFilter.value = urlCategory;
 
-    searchInput?.addEventListener('input', filterProducts);
-    categoryFilter?.addEventListener('change', filterProducts);
-    sortSelect?.addEventListener('change', () => { sortProducts(); filterProducts(); });
-    applyFiltersButton?.addEventListener('click', () => { sortProducts(); filterProducts(); });
+  searchInput?.addEventListener('input', filterProducts);
+  categoryFilter?.addEventListener('change', filterProducts);
+  sortSelect?.addEventListener('change', () => { sortProducts(); filterProducts(); });
+  applyFiltersButton?.addEventListener('click', () => { sortProducts(); filterProducts(); });
 
-    sortProducts();
-    filterProducts();
-  }
+  sortProducts();
+  filterProducts();
+
+  document.querySelectorAll(".btn-view").forEach(button => {
+    button.addEventListener("click", function () {
+      const card = this.closest(".product-card");
+      const productKey = card.dataset.product;
+      window.location.href = `product.html?product=${productKey}`;
+    });
+  });
+
+} 
 
   // ── Product page ──
   const isProductPage = document.getElementById('product-details');
