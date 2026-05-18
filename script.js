@@ -70,14 +70,13 @@ if (productsContainer) {
   filterProducts();
 
   document.querySelectorAll(".btn-view").forEach(button => {
-    button.addEventListener("click", function () {
-      const card = this.closest(".product-card");
-      const productKey = card.dataset.product;
-      window.location.href = `product.html?product=${productKey}`;
-    });
+  button.addEventListener("click", function () {
+    const card = this.closest(".product-card");
+    const productKey = card.dataset.product;
+    window.location.href = `product.html?product=${productKey}`;
   });
+});
 
-} 
 
   // ── Product page ──
   const isProductPage = document.getElementById('product-details');
